@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Text;
 
 namespace cursoADVapi
 {
@@ -36,6 +37,8 @@ namespace cursoADVapi
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "cursoADVapi", Version = "v1" });
             });
 
+            services.AddCors();
+
             ConfigureJwt(ref services);
 
         }
@@ -58,6 +61,15 @@ namespace cursoADVapi
 
             app.UseAuthorization();
 
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+            app.UseCors(options =>
+            options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            //app.UseMvc();
+
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
@@ -67,10 +79,34 @@ namespace cursoADVapi
         private void ConfigureJwt(ref IServiceCollection services)
         {
             //IMPLEMENTAÇÃO JWT
+            //services.AddCors();
+            //services.AddControllers();
+
+            //var key = Encoding.ASCII.GetBytes("fedaf7d8863b48e197b9287d492b708e");
+            //services.AddAuthentication(x =>
+            //{
+            //    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            //    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            //})
+            //.AddJwtBearer(x =>
+            //{
+            //    x.RequireHttpsMetadata = false;
+            //    x.SaveToken = true;
+            //    x.TokenValidationParameters = new TokenValidationParameters
+            //    {
+            //        ValidateIssuerSigningKey = true,
+            //        IssuerSigningKey = new SymmetricSecurityKey(key),
+            //        ValidateIssuer = false,
+            //        ValidateAudience = false
+            //    };
+            //});
+
             var signingConfigurations = new SigningConfigurations();
             services.AddSingleton(signingConfigurations);
 
+
             var tokenConfigurations = new TokenConfigurations();
+
 
             new ConfigureFromConfigurationOptions<TokenConfigurations>(
                 Configuration.GetSection("TokenConfigurations"))

@@ -82,4 +82,5 @@ namespace cursoADVapi.Controllers
                 return signingConf.Failed();
             }
         }
+    }
 }

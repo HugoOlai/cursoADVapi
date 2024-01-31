@@ -20,6 +20,8 @@ namespace cursoADVapi.Models
 
             SigningCredentials = new SigningCredentials(
                 Key, SecurityAlgorithms.RsaSha256Signature);
+
+            var sig = SigningCredentials;
         }
 
         public dynamic Failed()
