@@ -14,7 +14,8 @@ namespace cursoADVapi.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private ILogin _Login = Container.Get<ILogin>();
+        //private ILogin _Login = Container.Get<ILogin>();
+        private readonly ILogin _Login;
 
         private static readonly string[] Summaries = new[]
         {
@@ -22,10 +23,9 @@ namespace cursoADVapi.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogin Login)
         {
-            _logger = logger;
+            _Login = Login;
         }
 
         [HttpGet]

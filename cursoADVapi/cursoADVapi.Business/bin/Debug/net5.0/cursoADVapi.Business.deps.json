@@ -11,7 +11,8 @@
           "AutoMapper": "12.0.1",
           "Ninject": "3.3.6",
           "System.IdentityModel.Tokens.Jwt": "7.2.0",
-          "cursoADVapi.Model": "1.0.0"
+          "cursoADVapi.Model": "1.0.0",
+          "cursoADVapi.Repository": "1.0.0"
         },
         "runtime": {
           "cursoADVapi.Business.dll": {}
@@ -322,6 +323,14 @@
         "runtime": {
           "cursoADVapi.Model.dll": {}
         }
+      },
+      "cursoADVapi.Repository/1.0.0": {
+        "dependencies": {
+          "cursoADVapi.Model": "1.0.0"
+        },
+        "runtime": {
+          "cursoADVapi.Repository.dll": {}
+        }
       }
     }
   },
@@ -598,6 +607,11 @@
       "hashPath": "zstdsharp.port.0.7.3.nupkg.sha512"
     },
     "cursoADVapi.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "cursoADVapi.Repository/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

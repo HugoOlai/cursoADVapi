@@ -21,8 +21,8 @@ namespace cursoADVapi.Seguranca
                 Container.Setup();
                 configured = true;
 
-                Container.Bind<ILogin, LoginBusiness>();
-                Container.Bind<IUsuario, UsuarioBusiness>();
+                //Container.Bind<ILogin, LoginBusiness>();
+                //Container.Bind<IUsuario, UsuarioBusiness>();
                 //Container.Bind<IUsuarioRepository, UsuarioRepository>();
 
             }

@@ -599,6 +599,19 @@
         "runtime": {
           "bin/placeholder/cursoADVapi.Model.dll": {}
         }
+      },
+      "cursoADVapi.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "cursoADVapi.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/cursoADVapi.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/cursoADVapi.Repository.dll": {}
+        }
       }
     }
   },
@@ -1958,6 +1971,11 @@
       "type": "project",
       "path": "../cursoADVapi.Model/cursoADVapi.Model.csproj",
       "msbuildProject": "../cursoADVapi.Model/cursoADVapi.Model.csproj"
+    },
+    "cursoADVapi.Repository/1.0.0": {
+      "type": "project",
+      "path": "../cursoADVapi.Repository/cursoADVapi.Repository.csproj",
+      "msbuildProject": "../cursoADVapi.Repository/cursoADVapi.Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1965,7 +1983,8 @@
       "AutoMapper >= 12.0.1",
       "Ninject >= 3.3.6",
       "System.IdentityModel.Tokens.Jwt >= 7.2.0",
-      "cursoADVapi.Model >= 1.0.0"
+      "cursoADVapi.Model >= 1.0.0",
+      "cursoADVapi.Repository >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1997,6 +2016,9 @@
           "projectReferences": {
             "C:\\Users\\hugoo\\OneDrive\\Documentos\\Angular\\cursoADVapi\\cursoADVapi\\cursoADVapi\\cursoADVapi.Model\\cursoADVapi.Model.csproj": {
               "projectPath": "C:\\Users\\hugoo\\OneDrive\\Documentos\\Angular\\cursoADVapi\\cursoADVapi\\cursoADVapi\\cursoADVapi.Model\\cursoADVapi.Model.csproj"
+            },
+            "C:\\Users\\hugoo\\OneDrive\\Documentos\\Angular\\cursoADVapi\\cursoADVapi\\cursoADVapi\\cursoADVapi.Repository\\cursoADVapi.Repository.csproj": {
+              "projectPath": "C:\\Users\\hugoo\\OneDrive\\Documentos\\Angular\\cursoADVapi\\cursoADVapi\\cursoADVapi\\cursoADVapi.Repository\\cursoADVapi.Repository.csproj"
             }
           }
         }

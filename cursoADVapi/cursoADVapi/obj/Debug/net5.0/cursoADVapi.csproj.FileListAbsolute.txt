@@ -86,3 +86,5 @@ C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\c
 C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi\obj\Debug\net5.0\cursoADVapi.pdb
 C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi\obj\Debug\net5.0\cursoADVapi.genruntimeconfig.cache
 C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi\obj\Debug\net5.0\ref\cursoADVapi.dll
+C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi\bin\Debug\net5.0\cursoADVapi.Repository.dll
+C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi\bin\Debug\net5.0\cursoADVapi.Repository.pdb

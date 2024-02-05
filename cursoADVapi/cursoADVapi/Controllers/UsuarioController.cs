@@ -14,9 +14,9 @@ namespace cursoADVapi.Controllers
 
     public class UsuarioController : ControllerBase
     {
-        private IUsuario _usuario = Container.Get<IUsuario>();
+        //private IUsuario _usuario = Container.Get<IUsuario>();
 
-        //private readonly IUsuario _usuario;
+        private readonly IUsuario _usuario;
 
         //private readonly ILogger<WeatherForecastController> _logger;
 
@@ -25,10 +25,10 @@ namespace cursoADVapi.Controllers
         //    _usuario = usuario;
         //}
 
-        //public UsuarioController(IUsuario usuario)
-        //{
-        //    _usuario = usuario;
-        //}
+        public UsuarioController(IUsuario usuario)
+        {
+            _usuario = usuario;
+        }
 
         [HttpPost, AllowAnonymous, Route("Cadastrar")]
         public ActionResult Cadastrar([FromBody] UsuarioViewModel view)

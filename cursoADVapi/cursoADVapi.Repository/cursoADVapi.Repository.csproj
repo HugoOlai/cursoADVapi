@@ -5,9 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\cursoADVapi.Business\cursoADVapi.Business.csproj" />
     <ProjectReference Include="..\cursoADVapi.Model\cursoADVapi.Model.csproj" />
-    <ProjectReference Include="..\cursoADVapi\cursoADVapi.csproj" />
   </ItemGroup>
 
 </Project>

@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\cursoADVapi.Model\cursoADVapi.Model.csproj" />
+    <ProjectReference Include="..\cursoADVapi.Repository\cursoADVapi.Repository.csproj" />
   </ItemGroup>
 
 </Project>

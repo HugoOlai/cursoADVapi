@@ -13,3 +13,5 @@ C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\c
 C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi.Business\obj\Debug\net5.0\refint\cursoADVapi.Business.dll
 C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi.Business\obj\Debug\net5.0\cursoADVapi.Business.pdb
 C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi.Business\obj\Debug\net5.0\ref\cursoADVapi.Business.dll
+C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi.Business\bin\Debug\net5.0\cursoADVapi.Repository.dll
+C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi.Business\bin\Debug\net5.0\cursoADVapi.Repository.pdb
