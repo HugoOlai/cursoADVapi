@@ -1,11 +1,14 @@
 C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi.Business\bin\Debug\net5.0\cursoADVapi.Business.deps.json
 C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi.Business\bin\Debug\net5.0\cursoADVapi.Business.dll
 C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi.Business\bin\Debug\net5.0\cursoADVapi.Business.pdb
+C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi.Business\bin\Debug\net5.0\cursoADVapi.Model.dll
+C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi.Business\bin\Debug\net5.0\cursoADVapi.Model.pdb
 C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi.Business\obj\Debug\net5.0\cursoADVapi.Business.csproj.AssemblyReference.cache
 C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi.Business\obj\Debug\net5.0\cursoADVapi.Business.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi.Business\obj\Debug\net5.0\cursoADVapi.Business.AssemblyInfoInputs.cache
 C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi.Business\obj\Debug\net5.0\cursoADVapi.Business.AssemblyInfo.cs
 C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi.Business\obj\Debug\net5.0\cursoADVapi.Business.csproj.CoreCompileInputs.cache
+C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi.Business\obj\Debug\net5.0\cursoADVapi.Business.csproj.CopyComplete
 C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi.Business\obj\Debug\net5.0\cursoADVapi.Business.dll
 C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi.Business\obj\Debug\net5.0\refint\cursoADVapi.Business.dll
 C:\Users\hugoo\OneDrive\Documentos\Angular\cursoADVapi\cursoADVapi\cursoADVapi\cursoADVapi.Business\obj\Debug\net5.0\cursoADVapi.Business.pdb

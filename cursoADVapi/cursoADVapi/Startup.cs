@@ -40,6 +40,7 @@ namespace cursoADVapi
             services.AddCors();
 
             ConfigureJwt(ref services);
+            Injector(ref services);
 
         }
 
@@ -61,12 +62,16 @@ namespace cursoADVapi
 
             app.UseAuthorization();
 
-            app.UseCors(x => x
+            //app.UseCors(x => x
+            //    .AllowAnyOrigin()
+            //    .AllowAnyMethod()
+            //    .AllowAnyHeader());
+
+            app.UseCors(options =>
+                options
                 .AllowAnyOrigin()
                 .AllowAnyMethod()
                 .AllowAnyHeader());
-            app.UseCors(options =>
-            options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             //app.UseMvc();
 
 
@@ -142,6 +147,12 @@ namespace cursoADVapi
                     .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme‌​)
                     .RequireAuthenticatedUser().Build());
             });
+        }
+
+        private void Injector(ref IServiceCollection services)
+        {
+            //services.AddSingleton<IUsuarioRepository, UsuarioRepository>();
+
         }
     }
 }

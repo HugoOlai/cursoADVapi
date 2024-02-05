@@ -27,7 +27,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\hugoo\\OneDrive\\Documentos\\Angular\\cursoADVapi\\cursoADVapi\\cursoADVapi\\cursoADVapi.Model\\cursoADVapi.Model.csproj": {
+                "projectPath": "C:\\Users\\hugoo\\OneDrive\\Documentos\\Angular\\cursoADVapi\\cursoADVapi\\cursoADVapi\\cursoADVapi.Model\\cursoADVapi.Model.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

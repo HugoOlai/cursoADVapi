@@ -1,6 +1,7 @@
 ﻿using System;
 using cursoADVapi.Business._Interface;
 using cursoADVapi.Business._Busines._Login;
+using cursoADVapi.Business._Busines.Usuario;
 
 namespace cursoADVapi.Seguranca
 {
@@ -21,6 +22,8 @@ namespace cursoADVapi.Seguranca
                 configured = true;
 
                 Container.Bind<ILogin, LoginBusiness>();
+                Container.Bind<IUsuario, UsuarioBusiness>();
+                //Container.Bind<IUsuarioRepository, UsuarioRepository>();
 
             }
         }
