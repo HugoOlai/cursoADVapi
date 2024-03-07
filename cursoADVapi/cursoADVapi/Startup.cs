@@ -18,12 +18,17 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using MongoDB.Driver;
+using ProAdvCore.Repository.Context;
 using System.Text;
 
 namespace cursoADVapi
 {
     public class Startup
     {
+        private readonly IConfiguration _configuration;
+
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -34,6 +39,7 @@ namespace cursoADVapi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            ConexaoMongo();
 
             services.AddControllers();
             IMapper mapper = AutoMapperConfig.RegisterMappings().CreateMapper();
@@ -85,6 +91,12 @@ namespace cursoADVapi
             {
                 endpoints.MapControllers();
             });
+        }
+
+        private void ConexaoMongo()
+        {
+            MongoClient ConexaoProducao = new(Configuration.GetConnectionString("Database"));
+            ContextMongo.Database = ConexaoProducao.GetDatabase(Configuration.GetConnectionString("DatabaseName"));
         }
 
         private void ConfigureJwt(ref IServiceCollection services)

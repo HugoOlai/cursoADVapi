@@ -16,14 +16,14 @@ namespace cursoADVapi.Business._Busines.Usuario
 
         public string cadastrar(UsuarioViewModel usuario)
         {
-
-            _usuarioRepository.Cadastrar(new UsuarioModel { 
-                Nome = usuario.Nome,
-                Email = usuario.Email,
-                Sobrenome = usuario.Sobrenome,
-                Telefone = usuario.Telefone,
-                Senha = usuario.Senha
-            });
+            _usuarioRepository.pegarUsuarios();
+            //_usuarioRepository.Cadastrar(new UsuarioModel { 
+            //    Nome = usuario.Nome,
+            //    Email = usuario.Email,
+            //    Sobrenome = usuario.Sobrenome,
+            //    Telefone = usuario.Telefone,
+            //    Senha = usuario.Senha
+            //});
             return "usuario registrado com sucesso";
         }
 
