@@ -169,10 +169,10 @@ namespace cursoADVapi
 
         private void Injector(ref IServiceCollection services)
         {
-            services.AddSingleton<IUsuarioRepository, UsuarioRepository>();
+            services.AddSingleton<IUsuarioRepository, LoginRepository>();
             services.AddSingleton<IUsuario, UsuarioBusiness>();
             services.AddSingleton<ILogin, LoginBusiness>();
-            
+
 
 
 

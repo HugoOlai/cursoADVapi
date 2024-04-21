@@ -23,5 +23,10 @@ namespace cursoADVapi.Model._Models.Usuario
         public string Telefone { get; set; }
 
         public string Senha { get; set; }
+
+        public string cpfCnpj { get; set; }
+
+        public string Src { get; set; }
+
     }
 }

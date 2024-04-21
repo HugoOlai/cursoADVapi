@@ -18,6 +18,10 @@ namespace cursoADVapi.Model.ViewModel
 
         public string Telefone { get; set; }
 
+        public string CpfCnpj { get; set; }
+
         public string Senha { get; set; }
+
+        public string Src { get; set; }
     }
 }
