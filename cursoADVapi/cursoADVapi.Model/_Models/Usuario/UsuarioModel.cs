@@ -26,6 +26,8 @@ namespace cursoADVapi.Model._Models.Usuario
 
         public string cpfCnpj { get; set; }
 
+        public string cargo { get; set; }
+
         public string Src { get; set; }
 
     }

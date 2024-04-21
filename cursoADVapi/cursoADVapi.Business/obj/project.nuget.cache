@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "C8vQogvc+HsKnbJWxq31PIOeoUOepHwGzGRY8kjOAArUULTXWKmGJhXtsEFNKLx1iZSInpyEu+48BCguzYPcYw==",
+  "dgSpecHash": "wKpRG1o1bKCZwdwk24NHdBuzF3cBL7VrXIxGOLyMXruqAZypTYecHTrDuR0zosyzimBIX3vPZnJmWvl9+fvZOw==",
   "success": true,
   "projectFilePath": "C:\\Users\\hugoo\\OneDrive\\Documentos\\Angular\\cursoADVapi\\cursoADVapi\\cursoADVapi\\cursoADVapi.Business\\cursoADVapi.Business.csproj",
   "expectedPackageFiles": [
@@ -35,11 +35,8 @@
     "C:\\Users\\hugoo\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
-    "C:\\Users\\hugoo\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
-    "C:\\Users\\hugoo\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
-    "C:\\Users\\hugoo\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512"
   ],

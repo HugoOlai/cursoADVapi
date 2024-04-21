@@ -23,5 +23,8 @@ namespace cursoADVapi.Model.ViewModel
         public string Senha { get; set; }
 
         public string Src { get; set; }
+
+        public string cargo { get; set; }
+
     }
 }
