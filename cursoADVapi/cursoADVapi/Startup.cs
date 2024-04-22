@@ -1,11 +1,13 @@
 ﻿using AutoMapper;
 using cursoADVapi.Business._Busines._Login;
+using cursoADVapi.Business._Busines.Curso;
 using cursoADVapi.Business._Busines.Usuario;
 using cursoADVapi.Business._Interface;
 using cursoADVapi.Mappers;
 using cursoADVapi.Model._Models.Usuario;
 using cursoADVapi.Models;
 using cursoADVapi.Repository.Inferface;
+using cursoADVapi.Repository.Repositorios.Curso;
 using cursoADVapi.Repository.Repositorios.Usuario;
 using cursoADVapi.Seguranca;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -172,6 +174,8 @@ namespace cursoADVapi
             services.AddSingleton<IUsuarioRepository, LoginRepository>();
             services.AddSingleton<IUsuario, UsuarioBusiness>();
             services.AddSingleton<ILogin, LoginBusiness>();
+            services.AddSingleton<ICurso, CursoBusiness>(); 
+            services.AddSingleton<ICursoRepository, CursoRepository>(); 
 
 
 
