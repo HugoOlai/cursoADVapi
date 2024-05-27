@@ -2,6 +2,7 @@
 using cursoADVapi.Repository.Inferface;
 using MongoDB.Driver;
 using ProAdvCore.Repository.Context;
+using System;
 using System.Collections.Generic;
 
 namespace cursoADVapi.Repository.Repositorios.Usuario
@@ -13,10 +14,27 @@ namespace cursoADVapi.Repository.Repositorios.Usuario
             Collection.InsertOne(usuario);
         }
 
+        public bool AtualizarUsuario(UsuarioModel usuario)
+        {
+            var filter = Builders<UsuarioModel>.Filter.Eq(x => x.Id, usuario.Id);
+            var update = Builders<UsuarioModel>.Update
+                .Set(x => x.ListaCursos, usuario.ListaCursos);
+
+            var result = Collection.UpdateOne(filter, update);
+            return result.IsAcknowledged && result.ModifiedCount > 0;
+
+        }
+
         public List<UsuarioModel> pegarUsuarios()
         {
            var res = Collection.Find("{}").ToList();
            return res;
+        }
+
+        public UsuarioModel pegarUsuario(string usuarioId)
+        {
+            var res = Collection.Find(usuario => usuario.Id == usuarioId).SingleOrDefault();
+            return res;
         }
 
         public UsuarioModel Login(string Email, string senha)

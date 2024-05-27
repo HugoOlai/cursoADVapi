@@ -26,7 +26,11 @@ namespace cursoADVapi.Model.ViewModel
 
         public string Arquivo { get; set; }
 
+        public string valor { get; set; }
+
         public List<string> listaVideos { get; set; }
+
+        public List<string> Topcos { get; set; }
 
         public List<ArquivosCursos> listaArquivosApoio { get; set; }
 

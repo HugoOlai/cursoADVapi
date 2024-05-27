@@ -1,5 +1,6 @@
 ﻿using cursoADVapi.Business._Interface;
 using cursoADVapi.Model._Models.Curso;
+using cursoADVapi.Model._Models.Usuario;
 using cursoADVapi.Model.ViewModel;
 using cursoADVapi.Repository.Inferface;
 using ProAdvCore.Model.Mappers;
@@ -12,9 +13,11 @@ namespace cursoADVapi.Business._Busines.Curso
     public class CursoBusiness : ICurso
     {
         private readonly ICursoRepository cursoRepository;
-        public CursoBusiness(ICursoRepository _cursoRepository)
+        private readonly IUsuario usuarioBusiness;
+        public CursoBusiness(ICursoRepository _cursoRepository, IUsuario _usuarioBusiness)
         {
             cursoRepository = _cursoRepository;
+            usuarioBusiness = _usuarioBusiness;
         }
 
         public string Cadastrar(CursoViewModel cursoNovo)
@@ -39,6 +42,7 @@ namespace cursoADVapi.Business._Busines.Curso
                 obj.Titulo = cursoNovo.Titulo;
                 obj.DataLançamento = DateTime.Now;
                 obj.listaVideos = cursoNovo.listaVideos;
+                obj.Topcos = cursoNovo.Topcos;
                 obj.listaArquivosApoio = cursoNovo.listaArquivosApoio;
 
                 cursoRepository.Cadastrar(obj);
@@ -48,6 +52,38 @@ namespace cursoADVapi.Business._Busines.Curso
                 return "Curso já foi cadastrado";
             }
             return "Curso registrado com sucesso";
+        }
+
+        public string Contratar(string usuarioId, CursoViewModel curso)
+        {
+            var usuario = usuarioBusiness.PegarUsuario(usuarioId);
+            if (usuario.ListaCursos == null)
+                usuario.ListaCursos = new List<cursoContratado>();
+
+            usuario.ListaCursos.Add(new cursoContratado { 
+                Id = curso.Id,
+                DataContratacao = DateTime.Now,
+                ValorPago = curso.valor
+            });
+            try
+            {
+                return usuarioBusiness.AtualizarUsuario(new UsuarioModel { 
+                    Id = usuario.Id,
+                    Nome = usuario.Nome,
+                    Sobrenome = usuario.Sobrenome,
+                    Email = usuario.Email,
+                    Telefone = usuario.Telefone,
+                    CpfCnpj = usuario.CpfCnpj,
+                    Cargo = usuario.Cargo,
+                    Src = usuario.Src,
+                    ListaCursos = usuario.ListaCursos,
+                });
+            }
+            catch (Exception ex) {
+                return "Erro na contratação";
+
+            }
+
         }
 
         public CursoViewModel Pegar(CursoViewModel curso)
@@ -65,6 +101,7 @@ namespace cursoADVapi.Business._Busines.Curso
                 Estrutura = cursoPego.Estrutura,
                 MaterialApoio = cursoPego.MaterialApoio,
                 Objetivo = cursoPego.Objetivo,
+                Topcos = cursoPego.Topcos,
 
             };
         }
@@ -84,6 +121,9 @@ namespace cursoADVapi.Business._Busines.Curso
                     MaterialApoio = curso.MaterialApoio,
                     Estrutura = curso.Estrutura,
                     Objetivo = curso.Objetivo,
+                    Topcos = curso.Topcos,
+                    Src = curso.Src,
+
                 });
             });
             //var cursos = AMapper.RegisterMappings().Map(cursosPegos, new List<CursoViewModel>());

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cursoADVapi.Model._Models.Usuario;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,7 +25,10 @@ namespace cursoADVapi.Model.ViewModel
 
         public string Src { get; set; }
 
-        public string cargo { get; set; }
+        public string Cargo { get; set; }
+
+        public List<cursoContratado> ListaCursos { get; set; }
+
 
     }
 }

@@ -2,6 +2,7 @@
 using cursoADVapi.Model._Models.Usuario;
 using cursoADVapi.Model.ViewModel;
 using cursoADVapi.Repository.Inferface;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 
@@ -35,7 +36,7 @@ namespace cursoADVapi.Business._Busines.Usuario
                     Email = usuarioNovo.Email,
                     Telefone = usuarioNovo.Telefone,
                     Senha = usuarioNovo.Senha,
-                    cpfCnpj = usuarioNovo.CpfCnpj,
+                    CpfCnpj = usuarioNovo.CpfCnpj,
                     Src = usuarioNovo.Src,
                 });
             } else
@@ -45,11 +46,41 @@ namespace cursoADVapi.Business._Busines.Usuario
             return "usuario registrado com sucesso";
         }
 
+        public string AtualizarUsuario(UsuarioModel usuario)
+        {
+            try
+            {
+              var result = usuarioRepository.AtualizarUsuario(usuario);
+              return "Curso contratado";
+
+            } catch(Exception ex)
+            {
+                return "Erro na atualização do usuário";
+            }
+        }
+
 
         public UsuarioModel Login(string Email, string senha)
         {
             var res = usuarioRepository.Login(Email, senha);
             return res;
+        }
+
+        public UsuarioViewModel PegarUsuario(string usuarioId)
+        {
+            var usuario = usuarioRepository.pegarUsuario(usuarioId);
+            return new UsuarioViewModel()
+            {
+                Id = usuario.Id,
+                Nome = usuario.Nome,
+                Sobrenome = usuario.Sobrenome,
+                Email = usuario.Email,
+                Telefone = usuario.Telefone,
+                CpfCnpj = usuario.CpfCnpj,
+                Cargo = usuario.Cargo,
+                Src = usuario.Src,
+                ListaCursos = usuario.ListaCursos,
+    };
         }
     }
 }

@@ -44,5 +44,21 @@ namespace cursoADVapi.Controllers
             }
         }
 
+        [HttpGet, Route("PegarUsuario")]
+        public ActionResult PegarUsuario()
+        {
+            string usuarioId = User.FindFirst("usuario").Value;
+
+            try
+            {
+                var resultado = _usuario.PegarUsuario(usuarioId);
+                return Ok(resultado);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex);
+            }
+        }
+
     }
 }

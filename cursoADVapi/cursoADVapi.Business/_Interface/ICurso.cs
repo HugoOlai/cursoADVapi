@@ -9,6 +9,8 @@ namespace cursoADVapi.Business._Interface
     {
         string Cadastrar(CursoViewModel cursoNovo);
 
+        string Contratar(string usuarioId, CursoViewModel curso);
+        
         public CursoViewModel Pegar(CursoViewModel curso);
 
         public List<CursoViewModel> PegarTodos();

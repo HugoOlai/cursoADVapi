@@ -31,9 +31,14 @@ namespace cursoADVapi.Model._Models.Curso
 
         public List<string> listaVideos { get; set; }
 
+        public List<string> Topcos { get; set; }
+
         public List<ArquivosCursos> listaArquivosApoio { get; set; }
 
         public string Src { get; set; }
+
+        public string Valor { get; set; }
+
 
     }
 }

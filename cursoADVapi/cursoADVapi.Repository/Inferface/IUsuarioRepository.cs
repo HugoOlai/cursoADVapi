@@ -12,7 +12,11 @@ namespace cursoADVapi.Repository.Inferface
     {
         void Cadastrar(UsuarioModel usuario);
 
+        bool AtualizarUsuario(UsuarioModel usuario);
+
         List<UsuarioModel> pegarUsuarios();
+
+        UsuarioModel pegarUsuario(string usuarioId);
 
         UsuarioModel Login(string Email, string senha);
 

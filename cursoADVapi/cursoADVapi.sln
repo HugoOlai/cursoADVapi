@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cursoADVapi.Model", "cursoA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cursoADVapi.Business", "cursoADVapi.Business\cursoADVapi.Business.csproj", "{5C8FC2F4-1EC9-49A3-80C9-B779C82727F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cursoADVapi.Repository", "cursoADVapi.Repository\cursoADVapi.Repository.csproj", "{27F8D592-CA14-4F05-B8E3-62E8C9B77699}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cursoADVapi.Repository", "cursoADVapi.Repository\cursoADVapi.Repository.csproj", "{27F8D592-CA14-4F05-B8E3-62E8C9B77699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cursoADVapi.Util", "cursoADVapi.Util\cursoADVapi.Util.csproj", "{9FA09F3E-6F52-4F05-A561-2F6096EEBD05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{27F8D592-CA14-4F05-B8E3-62E8C9B77699}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27F8D592-CA14-4F05-B8E3-62E8C9B77699}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27F8D592-CA14-4F05-B8E3-62E8C9B77699}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FA09F3E-6F52-4F05-A561-2F6096EEBD05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FA09F3E-6F52-4F05-A561-2F6096EEBD05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FA09F3E-6F52-4F05-A561-2F6096EEBD05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FA09F3E-6F52-4F05-A561-2F6096EEBD05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

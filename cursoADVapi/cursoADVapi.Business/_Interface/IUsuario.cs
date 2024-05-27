@@ -9,6 +9,10 @@ namespace cursoADVapi.Business._Interface
     {
         string cadastrar(UsuarioViewModel usuario);
 
+        string AtualizarUsuario(UsuarioModel usuario);
+
         UsuarioModel Login(string Email, string senha);
+
+        UsuarioViewModel PegarUsuario(string usuarioId);
     }
 }

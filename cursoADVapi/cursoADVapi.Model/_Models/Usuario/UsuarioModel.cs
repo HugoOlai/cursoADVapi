@@ -1,6 +1,9 @@
-﻿using MongoDB.Bson;
+﻿using cursoADVapi.Model._Models.Curso;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using ProAdvCore.Model.Interface;
+using System;
+using System.Collections.Generic;
 
 namespace cursoADVapi.Model._Models.Usuario
 {
@@ -24,11 +27,24 @@ namespace cursoADVapi.Model._Models.Usuario
 
         public string Senha { get; set; }
 
-        public string cpfCnpj { get; set; }
+        public string CpfCnpj { get; set; }
 
-        public string cargo { get; set; }
+        public string Cargo { get; set; }
 
         public string Src { get; set; }
+
+        public List<cursoContratado> ListaCursos { get; set; }
+
+    }
+
+    public class cursoContratado
+    {
+        public string Id { get; set; }
+        
+        public DateTime DataContratacao { get; set; }
+        
+        public string ValorPago { get; set; }
+
 
     }
 }

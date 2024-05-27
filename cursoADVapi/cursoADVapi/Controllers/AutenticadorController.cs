@@ -88,7 +88,7 @@ namespace cursoADVapi.Controllers
 
                     view.Email = usuario.Email;
                     view.Id = usuario.Id;
-                    view.CpfCnpj = usuario.cpfCnpj;
+                    view.CpfCnpj = usuario.CpfCnpj;
                     view.Nome = usuario.Nome;
                     view.Telefone = usuario.Telefone;
                     view.Src = usuario.Src;

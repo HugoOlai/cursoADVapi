@@ -27,7 +27,6 @@ namespace cursoADVapi.Controllers
         {
             try
             {
-
                 var resultado = curso.Cadastrar(view);
                 return Ok(resultado);
             }
@@ -37,7 +36,22 @@ namespace cursoADVapi.Controllers
             }
         }
 
-        [HttpGet, AllowAnonymous, Route("pega")]
+        [HttpPost, Route("Contratar")]
+        public ActionResult Contratar([FromBody] CursoViewModel view)
+        {
+            string usuarioId = User.FindFirst("usuario").Value;
+            try
+            {
+                var resultado = curso.Contratar(usuarioId, view);
+                return Ok(resultado);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex);
+            }
+        }
+
+        [HttpPost, AllowAnonymous, Route("pegar")]
         public ActionResult Pegar([FromBody] CursoViewModel view)
         {
             try
