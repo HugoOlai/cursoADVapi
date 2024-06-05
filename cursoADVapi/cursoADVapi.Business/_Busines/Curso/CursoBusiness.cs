@@ -102,6 +102,7 @@ namespace cursoADVapi.Business._Busines.Curso
                 MaterialApoio = cursoPego.MaterialApoio,
                 Objetivo = cursoPego.Objetivo,
                 Topcos = cursoPego.Topcos,
+                valor = cursoPego.Valor,
 
             };
         }

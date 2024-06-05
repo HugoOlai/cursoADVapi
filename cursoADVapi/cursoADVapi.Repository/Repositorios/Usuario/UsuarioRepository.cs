@@ -18,7 +18,7 @@ namespace cursoADVapi.Repository.Repositorios.Usuario
         {
             var filter = Builders<UsuarioModel>.Filter.Eq(x => x.Id, usuario.Id);
             var update = Builders<UsuarioModel>.Update
-                .Set(x => x.ListaCursos, usuario.ListaCursos);
+                .Set(x => x.ListaCursos, usuario.ListaCursos );
 
             var result = Collection.UpdateOne(filter, update);
             return result.IsAcknowledged && result.ModifiedCount > 0;

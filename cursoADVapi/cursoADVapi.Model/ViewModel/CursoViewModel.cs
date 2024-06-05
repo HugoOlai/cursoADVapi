@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cursoADVapi.Model._Models.Curso;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +29,7 @@ namespace cursoADVapi.Model.ViewModel
 
         public string valor { get; set; }
 
-        public List<string> listaVideos { get; set; }
+        public List<videoModel> listaVideos { get; set; }
 
         public List<string> Topcos { get; set; }
 

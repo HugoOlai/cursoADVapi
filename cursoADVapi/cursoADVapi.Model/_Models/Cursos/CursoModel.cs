@@ -29,7 +29,7 @@ namespace cursoADVapi.Model._Models.Curso
 
         public string Objetivo { get; set; }
 
-        public List<string> listaVideos { get; set; }
+        public List<videoModel> listaVideos { get; set; }
 
         public List<string> Topcos { get; set; }
 
@@ -40,5 +40,24 @@ namespace cursoADVapi.Model._Models.Curso
         public string Valor { get; set; }
 
 
+    }
+
+    public class videoModel
+    {
+        public int Modulo { get; set; }
+        
+        public string Aula { get; set; }
+        
+        public string Src { get; set; }
+        
+        public string Descricao { get; set; }
+
+        public List<arquivoModel> Arquivos { get; set; }
+    }
+
+    public class arquivoModel
+    {
+        public string Src { get; set; }
+        public string Nome { get; set; }
     }
 }
