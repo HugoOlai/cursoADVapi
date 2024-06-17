@@ -52,6 +52,8 @@ namespace cursoADVapi.Model._Models.Curso
         
         public string Descricao { get; set; }
 
+        public bool AulaAtual { get; set; }
+
         public List<arquivoModel> Arquivos { get; set; }
     }
 
