@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "u3r7HyqFTpaE5CjulERwGlHzIk7odSIxkxdJnAO2OleqMsdzPJio/Sai2sEzly7WI0WfSwpM1Xt82UdQdQMSHA==",
+  "dgSpecHash": "7Ef2exXEKINhxoio1xLqb+LjrfDA9FwD6KN+MR96tlgkltzNOO9A/9V/qOEq0rFJll63RcC1VqyybWue8LM6CQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\hugoo\\OneDrive\\Documentos\\Angular\\cursoADVapi\\cursoADVapi\\cursoADVapi\\cursoADVapi\\cursoADVapi.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,8 @@
     "C:\\Users\\hugoo\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\jwt\\10.1.1\\jwt.10.1.1.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.29\\microsoft.aspnetcore.authentication.jwtbearer.6.0.29.nupkg.sha512",
+    "C:\\Users\\hugoo\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.15\\microsoft.aspnetcore.jsonpatch.7.0.15.nupkg.sha512",
+    "C:\\Users\\hugoo\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.15\\microsoft.aspnetcore.mvc.newtonsoftjson.7.0.15.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\6.0.0\\microsoft.extensions.fileproviders.abstractions.6.0.0.nupkg.sha512",
@@ -32,6 +34,7 @@
     "C:\\Users\\hugoo\\.nuget\\packages\\mongodb.driver.core\\2.23.1\\mongodb.driver.core.2.23.1.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\mongodb.libmongocrypt\\1.8.0\\mongodb.libmongocrypt.1.8.0.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\hugoo\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\ninject\\3.3.6\\ninject.3.3.6.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\nuget.commands\\6.8.0\\nuget.commands.6.8.0.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\nuget.common\\6.8.0\\nuget.common.6.8.0.nupkg.sha512",
@@ -46,6 +49,7 @@
     "C:\\Users\\hugoo\\.nuget\\packages\\nuget.protocol\\6.8.0\\nuget.protocol.6.8.0.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\nuget.resolver\\6.8.0\\nuget.resolver.6.8.0.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\nuget.versioning\\6.8.0\\nuget.versioning.6.8.0.nupkg.sha512",
+    "C:\\Users\\hugoo\\.nuget\\packages\\restsharp\\111.3.0\\restsharp.111.3.0.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\sharpcompress\\0.30.1\\sharpcompress.0.30.1.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\snappier\\1.0.0\\snappier.1.0.0.nupkg.sha512",
     "C:\\Users\\hugoo\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",

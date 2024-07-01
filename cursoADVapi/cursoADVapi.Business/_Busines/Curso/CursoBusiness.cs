@@ -3,10 +3,15 @@ using cursoADVapi.Model._Models.Curso;
 using cursoADVapi.Model._Models.Usuario;
 using cursoADVapi.Model.ViewModel;
 using cursoADVapi.Repository.Inferface;
+using Microsoft.Extensions.Options;
+using Ninject.Activation;
 using ProAdvCore.Model.Mappers;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace cursoADVapi.Business._Busines.Curso
 {
@@ -54,35 +59,83 @@ namespace cursoADVapi.Business._Busines.Curso
             return "Curso registrado com sucesso";
         }
 
-        public string Contratar(string usuarioId, CursoViewModel curso)
+        public string Contratar(string usuarioId, usuarioCurso obj)
         {
             var usuario = usuarioBusiness.PegarUsuario(usuarioId);
             if (usuario.ListaCursos == null)
                 usuario.ListaCursos = new List<cursoContratado>();
 
             usuario.ListaCursos.Add(new cursoContratado { 
-                Id = curso.Id,
+                Id = obj.Curso.Id,
                 DataContratacao = DateTime.Now,
-                ValorPago = curso.valor
+                ValorPago = obj.Curso.valor
             });
+
+            var options = new RestClientOptions("https://sandbox.asaas.com/api/v3/creditCard/tokenize");
+            var client = new RestClient(options);
+            var request = new RestRequest("");
+
+            request.AddHeader("accept", "application/json");
+            request.AddHeader("access_token", "$aact_YTU5YTE0M2M2N2I4MTliNzk0YTI5N2U5MzdjNWZmNDQ6OjAwMDAwMDAwMDAwMDAwODE1NjY6OiRhYWNoXzJjOWM3OTBkLTMxMzgtNGQxYy1hNmJkLWM2Nzk2MDU3OGI2Mg==");
+
+            var creditCard = new
+            {
+                holderName = usuario.Cartao.NomeCartao,
+                number = usuario.Cartao.NumeroCartao,
+                expiryMonth = usuario.Cartao.MesExpira,
+                expiryYear = usuario.Cartao.AnoExpira,
+                cvv = usuario.Cartao.Cvv
+            };
+
+            var creditCardHolderInfo = new
+            {
+                name = usuario.Nome,
+                email = usuario.Email ,
+                cpfCnpj = usuario.CpfCnpj,
+                postalCode = usuario.Endereco.Cep,
+                addressNumber = usuario.Endereco.Numero,
+                phone = usuario.Telefone,
+                remoteIp = usuario.Ip,
+            };
+
+            var objBody = new
+            {
+                customer = usuario.Id,
+                creditCard = creditCard,
+                creditCardHolderInfo = creditCardHolderInfo
+            };
+        
+
+            request.AddJsonBody(Newtonsoft.Json.JsonConvert.SerializeObject(objBody), false);
+            //CadastraClienteAsaas(request, client);
+
+            //var usuarioAssas = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(response);
+
             try
             {
-                return usuarioBusiness.AtualizarUsuario(new UsuarioModel { 
-                    Id = usuario.Id,
-                    Nome = usuario.Nome,
-                    Sobrenome = usuario.Sobrenome,
-                    Email = usuario.Email,
-                    Telefone = usuario.Telefone,
-                    CpfCnpj = usuario.CpfCnpj,
-                    Cargo = usuario.Cargo,
-                    Src = usuario.Src,
-                    ListaCursos = usuario.ListaCursos,
-                });
+                //return usuarioBusiness.AtualizarUsuario(new UsuarioModel { 
+                //    Id = usuario.Id,
+                //    Nome = usuario.Nome,
+                //    Sobrenome = usuario.Sobrenome,
+                //    Email = usuario.Email,
+                //    Telefone = usuario.Telefone,
+                //    CpfCnpj = usuario.CpfCnpj,
+                //    Cargo = usuario.Cargo,
+                //    Src = usuario.Src,
+                //    ListaCursos = usuario.ListaCursos,
+                //});
+                return null;
             }
             catch (Exception ex) {
                 return "Erro na contratação";
 
             }
+
+        }
+
+        public static async Task CadastraClienteAsaas(RestRequest request, RestClient client)
+        {
+            var response = await client.PostAsync(request);
 
         }
 

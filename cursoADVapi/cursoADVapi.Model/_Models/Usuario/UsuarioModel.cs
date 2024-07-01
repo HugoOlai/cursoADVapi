@@ -17,6 +17,8 @@ namespace cursoADVapi.Model._Models.Usuario
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
+        public string idAsaas { get; set; }
+
         public string Nome { get; set; }
 
         public string Sobrenome { get; set; }

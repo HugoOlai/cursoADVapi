@@ -36,13 +36,18 @@ namespace cursoADVapi.Model.ViewModel
         public List<ArquivosCursos> listaArquivosApoio { get; set; }
 
         public string Src { get; set; }
+
+        public string Ip { get; set; }
     }
 
     public class ArquivosCursos
     {
         public string Id { get; set; }
+
         public string name { get; set; }
+
         public string file { get; set; }
+
         public string base64 { get; set; }
 
         //public string Id { get; set; }
@@ -52,5 +57,12 @@ namespace cursoADVapi.Model.ViewModel
         //public double size { get; set; }
         //public string type { get; set; }
         //public string webkitRelativePath { get; set; }
+    }
+
+    public class usuarioCurso
+    {
+        public CursoViewModel Curso { get; set; }
+
+        public UsuarioViewModel Usuario { get; set; }
     }
 }

@@ -37,7 +37,7 @@ namespace cursoADVapi.Controllers
         }
 
         [HttpPost, Route("Contratar")]
-        public ActionResult Contratar([FromBody] CursoViewModel view)
+        public ActionResult Contratar([FromBody] usuarioCurso view)
         {
             string usuarioId = User.FindFirst("usuario").Value;
             try
